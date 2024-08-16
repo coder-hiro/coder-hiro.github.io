@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+/* 共通部分 */
+img {
+  max-width: 100%;
+}
+
+header {
+  padding: 40px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Kiwi Maru", serif;
+  font-weight: bold;
+}
+
+.g-nav {
+  width: 100%;
+  height: 50px;
+  background-color: #00ffc8;
+}
+
+.g-nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.g-nav li {
+  width: 20%;
+}
+
+.g-nav a {
+  color: #000000;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  border-left: 1px solid #ffffff;
+}
+
+.g-nav a:nth-last-of-type(1) {
+  border-right: 1px solid #ffffff;
+}
+
+a:hover {
+  background-color: #299e9e;
+  color: #ffffff;
+  /* フワッと */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #00ffc8;
+}
+
+footer > P {
+  text-align: center;
+  color: #000000;
+  line-height: 100px;
+}
+
+main {
+  max-width: 960px;
+  margin: 50px auto 100px;
+}
+
+.current {
+  background-color: #299e9e;
+}
+
+/* トップページ */
+.main-visual {
+  margin-bottom: 100px;
+  /* 画像の横縦比 */
+  aspect-ratio: 2/1;
+}
+
+.main-visual > img {
+  width: 100%;
+  height: 100%;
+  /* 画像のトリミング */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* トリミングの位置 */
+  -o-object-position: center;
+     object-position: center;
+}
+
+.main-copy > h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: "Kiwi Maru", serif;
+}
+
+.main-copy > p {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 2;
+  font-family: "Kiwi Maru", serif;
+}
+
+/* 季節ページ */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 40px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.text-box {
+  width: calc(37.5% - 40px);
+}
+
+.text-box > h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: "Kiwi Maru", serif;
+}
+
+.text-box > p {
+  line-height: 1.75;
+  font-family: "Kiwi Maru", serif;
+}
+
+.img-box {
+  width: 62.5%;
+}
+
+/* 春ページの部分 */
+.spring > .g-nav,
+.spring > footer {
+  background-color: #fe27a5;
+}
+
+.spring > .g-nav a,
+.spring > footer > p {
+  color: #ffffff;
+}
+
+.spring > .g-nav a:hover {
+  background-color: #ffcbfa;
+  color: #000;
+}
+
+.spring .current {
+  background-color: #ffcbfa;
+}
+
+/* 夏ページの部分 */
+.summer > .g-nav,
+.summer > footer {
+  background-color: #4727fe;
+}
+
+.summer > .g-nav a,
+.summer > footer > p {
+  color: #ffffff;
+}
+
+.summer > .g-nav a:hover {
+  background-color: #9aa3fc;
+  color: #000;
+}
+
+.summer .current {
+  background-color: #9aa3fc;
+}
+
+/* 秋ページの部分 */
+.fall > .g-nav,
+.fall > footer {
+  background-color: #ff5506;
+}
+
+.fall > .g-nav a,
+.fall > footer > p {
+  color: #ffffff;
+}
+
+.fall > .g-nav a:hover {
+  background-color: #ff9e78;
+  color: #000;
+}
+
+.fall .current {
+  background-color: #ff9e78;
+}
+
+/* 冬ページの部分 */
+.winter > .g-nav,
+.winter > footer {
+  background-color: #7129ff;
+}
+
+.winter > .g-nav a,
+.winter > footer > p {
+  color: #ffffff;
+}
+
+.winter > .g-nav a:hover {
+  background-color: #ae93ff;
+  color: #000;
+}
+
+.winter .current {
+  background-color: #ae93ff;
+}
+
+/* 960px以下 */
+@media (max-width: 960px) {
+  main {
+    padding: 0 10px;
+  }
+}
+/* 767px以下 */
+@media (max-width: 767px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 90px 0px;
+  }
+  /* 縦並びのした時のサイズ */
+  .text-box {
+    width: 100%;
+  }
+  /* 縦並びのした時のサイズ */
+  .img-box {
+    width: 100%;
+    text-align: center;
+  }
+  .main-visual {
+    /* 画像の横縦比 */
+    aspect-ratio: 1/0.8;
+  }
+  header {
+    padding: 20px 0;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .g-nav a {
+    font-size: 12px;
+  }
+  .main-copy > h2 {
+    font-size: 24px;
+  }
+}

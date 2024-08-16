@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+/* 変数の登録 */
+:root {
+  --color: #d4b899;
+
+  --color2: #fc802c;
+
+  --font: "Noto Sans JP", sans-serif;
+}
+
+/* スムーススクロール */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* ----------------PCレイアウト --------------*/
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff66;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: var(--font);
+
+  /* レイヤー最上位にする */
+  z-index: calc(infinity);
+}
+
+.header-inner > a {
+  color: #111;
+}
+
+.tag-line {
+}
+
+.g-nav > ul {
+  display: flex;
+  gap: 30px;
+}
+
+.g-nav a {
+  color: #000000;
+  padding: 15px 15px;
+}
+
+.g-nav a:hover {
+  /* ホバーした時に下線 */
+  text-decoration: underline 4px var(--color2);
+  /* 下線と文字の余白 */
+  text-underline-offset: 4px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  width: 50%;
+  padding: 0 20px;
+  background-color: #f9fff9;
+}
+
+.main-visual {
+  width: 50%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.main-visual > img {
+  object-fit: cover;
+  object-position: center 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.city {
+  margin: 200px 0;
+
+  /* ページ到達位置を調整する */
+  scroll-margin-top: 120px;
+}
+
+.city > h2 {
+  margin-bottom: 30px;
+  border-left: 20px solid var(--color2);
+  border-bottom: 1px solid var(--color2);
+  padding: 2px 24px;
+}
+.city-main-img {
+  margin-bottom: 30px;
+  aspect-ratio: 16/9;
+}
+
+.city-main-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city > p {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  width: calc((100% - 40px) / 2);
+  aspect-ratio: 1/1;
+}
+
+.thumb > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.map > iframe {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  height: 80px;
+  text-align: center;
+  padding-top: 20px;
+
+  /* 変数を呼び出す */
+  background-color: var(--color);
+}
+
+/* -----------960px以下--------------- */
+@media (max-width: 960px) {
+  header {
+    padding: 0 20px;
+  }
+}
+
+/* -----------767px以下--------------- */
+
+@media (max-width: 767px) {
+  header {
+    height: auto;
+    display: block;
+    padding: 5px;
+  }
+
+  .header-inner {
+  }
+
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tag-line {
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+  }
+
+  .g-nav > ul {
+    gap: 0 16px;
+    justify-content: center;
+  }
+
+  .g-nav a {
+    display: block;
+    padding: 10px 15px;
+  }
+
+  .wrapper {
+    display: block;
+  }
+  .main-visual {
+    width: 100%;
+    position: static;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .city h2 {
+    font-size: 22px;
+  }
+
+  .gallery {
+    gap: 40px 15px;
+  }
+
+  .thumb {
+    width: calc((100% - 20px) / 2);
+  }
+}
