@@ -1,0 +1,116 @@
+@use "reset";
+
+html{
+    // スムーススクロール
+    scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+}
+
+//------------------------------------------------
+
+header {
+  width: 25%;
+  height: 100vh;
+  background-color: #f0ffe4;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+//------------------------------------------------
+
+
+#g-nav {
+  padding: 20px;
+  li {
+    margin-bottom: 20px;
+    &.current {
+      a {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+  a {
+    color: #333;
+    padding: 4px 10px;
+  }
+}
+
+//------------------------------------------------
+
+
+main {
+  width: 75%;
+  background-color: #fff0e5;
+}
+
+.kadai-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+
+    &::after {
+      display: block;
+      font-size: 20px;
+      content: attr(data-en);
+      font-weight: normal;
+    }
+  }
+}
+
+.kadai-list {
+  padding: 50px 0 50px 50px;
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.main-visual {
+  width: 100%;
+  height: 80vh;
+  img {
+    object-fit: cover;
+    object-position: 50% 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-copy {
+  padding: 50px 20px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+.lead {
+  max-width: 600px;
+  font-size: 18px;
+  margin: 0 auto 50px;
+}
+
+.free {
+  width: 100%;
+  height: 100vh;
+  background-color: #cbffe5;
+}
+
+footer {
+}
