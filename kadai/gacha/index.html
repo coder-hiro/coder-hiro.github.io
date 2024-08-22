@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for文とif文を使った3連ガチャ</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" href="tochigacha.png" sizes="192*192" />
+  </head>
+  <body>
+    <header>
+      <h1>for文とif文を使った3連ガチャ</h1>
+    </header>
+    <main>
+      <div class="main__button">
+        <button class="button-10" onclick="gacha()">3連ガチャを回す</button>
+      </div>
+
+      <div class="wrapper" id="outer">
+        <img class="gachagacha" src="./img/gachagacha.png" alt="" />
+      </div>
+    </main>
+    <footer>
+      <p>
+        <small>&copy; <span id="this-year"></span> FELICA</small>
+      </p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

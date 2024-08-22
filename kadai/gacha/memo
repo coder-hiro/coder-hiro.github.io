@@ -1,0 +1,30 @@
+制作3連ガチャ
+for文の中にif文を入れる
+
+javaScript
+for文 繰り返す
+if文 割合を決める
+配列 画像を複数してする
+ランダム Math.randam
+
+1.使用する画像のランクと名前を整理する
+ランクの名前
+rank3 排出率 5% 01.png,02.png
+rank2 排出率35% 03.png,04.png,05.png
+rank1 排出率60% 06.png,07.png,08.png,09.png,10.png,11.png
+
+2.使用する変数や配列を事前にまとめておく
+配列
+star3
+star2
+star1
+
+排出率
+star1Ratio =  1- 60
+star2Ratio = 61- 95
+star3Ratio = 96-100
+
+各ランクに入っているキャラ数
+stat1Total = 4
+stat2Total = 3
+stat3Total = 2

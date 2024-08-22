@@ -1,8 +1,8 @@
 @use "reset";
 
-html{
-    // スムーススクロール
-    scroll-behavior: smooth;
+html {
+  // スムーススクロール
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -31,7 +31,6 @@ header {
 
 //------------------------------------------------
 
-
 #g-nav {
   padding: 20px;
   li {
@@ -50,7 +49,6 @@ header {
 }
 
 //------------------------------------------------
-
 
 main {
   width: 75%;
@@ -78,6 +76,12 @@ main {
   padding: 50px 0 50px 50px;
   li {
     margin-bottom: 20px;
+    a {
+      color: #333;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
