@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>donuts-shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/jquery.bxslider.css" />
+  </head>
+  <body>
+    <header id="sp-header">
+      <h1>
+        FELICA<br />
+        Bread&Salad
+      </h1>
+      <nav id="g-nav">
+        <ul>
+          <li><a href="#about-page">ABOUT</a></li>
+          <li><a href="#access-page">ACCESS</a></li>
+          <li>
+            <a href="#"><img src="./img/facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./img/instagram.svg" alt="" /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <button id="ham-btn"><span></span></button>
+
+    <div class="main-visual">
+      <ul class="bxslider">
+        <li><img src="./img/01.webp" /></li>
+        <li><img src="./img/02.webp" /></li>
+        <li><img src="./img/03.webp" /></li>
+        <li><img src="./img/04.webp" /></li>
+      </ul>
+    </div>
+
+    <div class="sp-title">
+      <p>FELICA<br />
+        Bread&Salad</p>
+    </div>
+
+    <p><a class="cta" href="#">オンラインショップ</a></p>
+
+    <main>
+      <div class="about section" id="about-page">
+        <h2 data-en="ABOUT">私たちについて</h2>
+        <h3>
+          Lorem, ipsum dolor<br />
+          sit amet consectetur<br />
+          adipisicing elit.
+        </h3>
+        <p>
+          Lorem ipsum dolor sit<br />
+          amet consectetur adipisicing<br />
+          elit. Rerum doloremque reprehenderit ea!
+        </p>
+      </div>
+
+      <div class="parallax"></div>
+
+      <div class="access section" id="access-page">
+        <h2 data-en="ACCESS">アクセス</h2>
+        <h3>
+          FELICA<br />
+          Bread&Salad
+        </h3>
+        <div class="g-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.0314421588198!2d139.71181857459567!3d35.72485340620029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2z5rGg6KKL6aeF!5e0!3m2!1sja!2sjp!4v1721115747940!5m2!1sja!2sjp"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <small>&copy;<span id="this-year"></span>FELICA Bread&Salad</small>
+      </p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/jquery.bxslider.js"></script>
+    <script>
+      jQuery(function () {
+        $(".bxslider").bxSlider({
+          mode: "fade",
+          auto: true,
+          controls: false,
+          pager: true,
+          speed: 2000,
+          pause: 2000,
+          // SPのタッチ操作を有効にする
+          touchEnabled: false,
+        });
+      });
+
+      // ハンバーガーメニュー
+      jQuery("#ham-btn").on("click", function () {
+        jQuery(this).toggleClass("click");
+        jQuery("#sp-header").toggleClass("slide");
+      });
+
+      // navのリンクをクリックしたらハンバーガーメニューを閉じる
+      jQuery("#g-nav a").on("click", function () {
+        jQuery("#sp-header").removeClass("slide");
+        jQuery("#ham-btn").removeClass("click");
+      });
+
+      // 西暦の取得
+      // 変数fullYearに西暦を取得して代入
+      const fullYear = new Date().getFullYear();
+      // idがthis-yearのテキストを書き換える
+
+      if (fullYear >= 2025) {
+        // 2025年以降の場合は2025年に書き換える
+        jQuery("#this-year").text("2024 - " + fullYear);
+      } else {
+        jQuery("#this-year").text(fullYear);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+@charset "UTF-8";
+
+/* スムーススクール */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------header--------------------------- */
+
+header {
+  background-color: #fff;
+  width: fit-content;
+  height: 80vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-family: "Kaisei Opti", serif;
+  padding: 20px;
+
+  @media (max-width: 640px) {
+    height: 100vh;
+    width: 70%;
+    background-color: #ffffffbb;
+    backdrop-filter: blur(10px);
+    translate: -100% 0;
+    transition: 0.2s;
+  }
+
+  h1 {
+    margin-bottom: 150px;
+
+    @media (max-width: 640px) {
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
+  }
+
+  &.slide {
+    translate: 0 0;
+    transition: 0.2s;
+
+    h1 {
+      @media (max-width: 640px) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+/* ---------------------nav---------------------- */
+
+#g-nav {
+  padding-left: 20px;
+  ul {
+    li {
+      margin-bottom: 10px;
+      &:nth-of-type(n + 3) {
+        width: 40px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 30px;
+      }
+
+      a {
+        color: #000;
+        font-size: 18px;
+      }
+
+      @media (max-width: 640px) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+
+/* -----------------main-visual --------------*/
+
+.main-visual {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: calc(100% - 50px);
+  height: calc(100vh - 50px);
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 60vh;
+    margin: 0 0 100px 0;
+  }
+
+  li {
+    width: 100%;
+    height: 100vh;
+
+    @media (max-width: 640px) {
+      height: 60vh;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* -----------------cta --------------*/
+
+.cta {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  background-color: #7a893f;
+  color: #fff;
+  /* 文字を縦書き */
+  writing-mode: vertical-rl;
+  padding: 15px;
+  font-weight: bold;
+  /* 高さを中身に合わせる */
+  height: fit-content;
+
+  @media (max-width: 640px) {
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* --------------------main   -------- */
+
+.section {
+  width: 100%;
+  background-color: #fff;
+  /* １画面位以上の高さ */
+  min-height: 100vh;
+  padding: 20vh 10px;
+  /* スムーススクール着地場所の調整 */
+  scroll-margin-top: -110px;
+
+  @media (max-width: 640px) {
+    padding: 10vh 10px;
+    scroll-margin-top: 0px;
+  }
+
+  h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 30px;
+
+    @media (max-width: 640px) {
+      font-size: 20px;
+    }
+
+    &::before {
+      content: attr(data-en);
+      font-family: serif;
+      font-size: 20px;
+      display: block;
+
+      @media (max-width: 640px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.about {
+  text-align: center;
+  h3 {
+    font-size: 28px;
+    line-height: 1.75;
+    margin-bottom: 50px;
+
+    @media (max-width: 640px) {
+      font-size: 20px;
+    }
+  }
+  p {
+    line-height: 2;
+
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: normal;
+    }
+  }
+}
+
+.access {
+  h3 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.75;
+    margin-bottom: 50px;
+
+    @media (max-width: 640px) {
+      font-size: 20px;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+  }
+
+  .g-map {
+    margin: 0 auto;
+    width: 80%;
+    aspect-ratio: 16/9;
+
+    @media (max-width: 640px) {
+      width: 96%;
+      aspect-ratio: 1/0.8;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      /* 白黒に加工 */
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.parallax {
+  width: 100%;
+  height: 50vh;
+  background: url(../img/05.webp) no-repeat center center/cover fixed;
+  /* background-attachment: fixed; */
+
+  @media (max-width: 960px) {
+    background: url(../img/05.webp) no-repeat center center/cover scroll;
+  }
+}
+/* ------------------footer------------------------ */
+
+footer {
+  width: 100%;
+  padding: 10px 0 40px;
+
+  @media (max-width: 640px) {
+    padding: 10px 0 20px;
+  }
+
+  p {
+    width: 80%;
+    text-align: right;
+    background-color: #e08686;
+    margin: 0 auto;
+
+    @media (max-width: 640px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+/* -----------------ハンバーガーボタン----------------------------- */
+
+#ham-btn {
+  width: 43px;
+  height: 43px;
+  /* border: 1px solid #000; */
+  position: fixed;
+  right: 10px;
+  top: 5px;
+  z-index: 10;
+  background-color: #f5f5f5;
+  display: none;
+
+  @media (max-width: 640px) {
+    display: block;
+  }
+
+  span {
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: #e08686;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transition: 0.3s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::before {
+      background-color: #e08686;
+      top: -9px;
+    }
+    &::after {
+      background-color: #e08686;
+      top: 9px;
+    }
+  }
+
+  &.click {
+    span {
+      background-color: transparent;
+      transition: 0.3s;
+
+      &::before,
+      &::after {
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        top: 9px;
+        rotate: 45deg;
+      }
+      &::after {
+        top: -7px;
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------ */
+
+.sp-title {
+  display: none;
+  font-family: "Kaisei Opti", serif;
+
+  @media (max-width: 640px) {
+    display: block;
+    width: fit-content;
+    padding: 30px;
+    background-color: #ffffffaa;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    font-size: 22px;
+  }
+}

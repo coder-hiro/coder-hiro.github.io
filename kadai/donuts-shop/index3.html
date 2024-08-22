@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bxslider実装</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        vertical-align: bottom;
+      }
+      h1 {
+        text-align: center;
+        margin: 30px 0 50px;
+      }
+      .main-vusial {
+        width: 100%;
+        height: 100vh;
+        /* aspect-ratio: 16 / 9; */
+        margin: 0 auto;
+
+        li {
+          width: 100%;
+          height: 100vh;
+          /* aspect-ratio: 16 / 9; */
+        }
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./css/jquery.bxslider.css" />
+  </head>
+  <body>
+    <h1>bxslider実装</h1>
+    <div class="main-vusial">
+      <ul class="bxslider">
+        <li><img src="./img/01.webp" alt="" /></li>
+        <li><img src="./img/02.webp" alt="" /></li>
+        <li><img src="./img/03.webp" alt="" /></li>
+        <li><img src="./img/04.webp" alt="" /></li>
+      </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script>
+      $(function () {
+        $(".bxslider").bxSlider({
+          // 画像の切り替わり
+          mode: "fade",
+          //   true: ON false: OFF
+          auto: true,
+          // コントロールの表示 OFF
+          controls: false,
+          // ページャーの表示 OFF
+          pager: false,
+          // 画像の切り替わり時間
+          speed: 2000,
+          // 画像の表示時間
+          pause: 2000,
+        });
+      });
+
+      jQuery("h1").css("color", "red");
+    </script>
+  </body>
+</html>
