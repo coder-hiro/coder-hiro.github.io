@@ -353,7 +353,8 @@ main {
   color: #333;
 }
 .kadai-list li a:hover {
-  text-decoration: underline;
+  -webkit-text-decoration: underline 2px;
+          text-decoration: underline 2px;
 }
 
 .main-visual {

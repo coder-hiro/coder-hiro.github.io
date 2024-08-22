@@ -79,7 +79,7 @@ main {
     a {
       color: #333;
       &:hover {
-        text-decoration: underline;
+        text-decoration: underline 2px;
       }
     }
   }
