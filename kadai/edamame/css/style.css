@@ -1,0 +1,191 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  vertical-align: bottom;
+  /* フルードイメージの設定 */
+  max-width: 100%;
+}
+/* PC */
+header {
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* 見出しh１に画像を使う場合 */
+h1 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  /* 画像挿入 */
+  background: url(../img/logo.svg) no-repeat center center / cover;
+  /*　文字を右側に移動 */
+  text-indent: 100%;
+  /* 改行無効 */
+  white-space: nowrap;
+  /* はみ出した箇所を隠す */
+  overflow: hidden;
+}
+
+/* ---nav--- */
+.g-nav {
+  height: 50px;
+  background-color: #6b8e23;
+}
+
+.g-nav > ul {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.g-nav li {
+  width: 25%;
+}
+
+.g-nav a {
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  border-right: 1px solid #fff;
+}
+
+.g-nav a:hover {
+  background-color: #2e8b57;
+}
+
+/* ボーダーを左側に追加 */
+.g-nav li:first-of-type > a {
+  border-left: 1px solid #fff;
+}
+
+/* ----wrapper----- */
+.wrapper {
+  max-width: 960px;
+  margin: 60px auto 100px;
+  display: flex;
+  gap: 0 40px;
+}
+
+main {
+  width: 600px;
+}
+
+.nutrition {
+  margin-bottom: 100px;
+}
+
+.nutrition > h2 {
+  margin-bottom: 20px;
+}
+
+.lead {
+  line-height: 1.8;
+
+  background-color: #f7ffe8;
+  padding: 20px;
+}
+
+.food > h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.food-1 {
+  margin-bottom: 100px;
+}
+
+.food-item {
+  background-color: #f7ffe8;
+  padding: 20px;
+}
+.food-item > .photo {
+  margin-bottom: 10px;
+  /* box-shadow: #000000 0 0 10px; */
+}
+
+.food-item > .text {
+  line-height: 2;
+}
+
+.food-item > h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+aside {
+  width: calc(100% - 600px - 40px);
+}
+
+aside > h2 {
+  margin-bottom: 20px;
+}
+
+aside > .photo {
+  margin-bottom: 20px;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #8b4513;
+}
+
+footer > p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+.icon {
+  display: flex;
+  justify-content: right;
+  gap: 0 30px;
+  padding-right: 30px;
+}
+
+.icon > li {
+  width: 40px;
+}
+
+.icon a:hover {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+/* ブレイクポイント960px以下 */
+@media (max-width: 960px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  main {
+    width: 500px;
+  }
+
+  aside {
+    width: calc(100p - 500px - 40px);
+  }
+}
+/* ブレイクポイント640px以下 */
+@media (max-width: 640px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 60px 0;
+  }
+
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+  }
+}
