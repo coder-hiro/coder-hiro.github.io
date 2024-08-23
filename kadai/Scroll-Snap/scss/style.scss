@@ -1,0 +1,61 @@
+@use "reset";
+
+header {
+  background-color: #ffd1ff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+main {
+  padding: 40px 10px;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 80px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+
+  @media (max-width: 767px) {
+    gap: 0px 20px;
+    flex-wrap: nowrap;
+    overflow: auto;
+    scroll-snap-type: x mandatory; //横スクロール
+  }
+
+  .box {
+    width: calc((100% - 60px) / 4);
+
+    @media (max-width: 767px) {
+      flex: 0 0 80%;
+      scroll-snap-align: start; //スクロールの位置
+      scroll-snap-stop: always; //スクロールの位置
+    }
+
+    .inner {
+      width: 100%;
+      aspect-ratio: 16/9;
+
+      @media (max-width: 767px) {
+        aspect-ratio: 4/3;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+}
+
+footer {
+  background-color: #ffd1ff;
+  padding: 30px 0;
+  text-align: center;
+}
