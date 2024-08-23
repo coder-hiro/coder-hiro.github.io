@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+body {
+  background-color: #f0fff7;
+  
+}
+
+/* ----------------header------------------------- */
+
+header {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #26523a;
+  margin-bottom: 70px;
+
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 42px;
+
+    @media (max-width: 640px) {
+      font-size: 32px;
+    }
+  }
+}
+
+/* -------------------main---------------------- */
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto 100px;
+  columns: 4;
+  column-gap: 10px;
+
+  @media (max-width: 960px) {
+    columns: 3;
+    width: 94%;
+  }
+
+  @media (max-width: 640px) {
+    columns: 2;
+    width: 97%;
+    column-gap: 5px;
+  }
+}
+
+.box {
+  background-color: #ffffff5c;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* 要素内の改行を避ける */
+  break-inside: avoid;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 15px #aaa;
+    transition: 0.3s;
+  }
+
+  @media (max-width: 640px) {
+    margin-bottom: 5px;
+  }
+}
+
+.photo {
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+/* ----------------footer------------------------- */
+
+footer {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #448d65;
+
+  p {
+    text-align: center;
+    color: #ffffff;
+  }
+}
