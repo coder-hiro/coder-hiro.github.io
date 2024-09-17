@@ -71,3 +71,16 @@ var wow = new WOW({
 });
 wow.init();
 new WOW().init();
+
+// -----------------多言語用のリダイレクト---------------------------
+
+//#lang-jaのURLを日本語ページに変更
+jQuery("#btn-ja").href = "https://coder-hiro.github.io/restaurant-site-multi/";
+
+// #lang-enのURLをイタリア語ページに変更
+jQuery("#btn-it").href =
+  "https://coder--hiro-github-io.translate.goog/restaurant-site-multi/?_x_tr_sl=ja&_x_tr_tl=it&_x_tr_hl=ja";
+// #lang-zhのURLをフランス語ページに変更
+
+jQuery("#btn-fr").href =
+  "https://coder--hiro-github-io.translate.goog/restaurant-site-multi/?_x_tr_sl=ja&_x_tr_tl=fr&_x_tr_hl=ja";
