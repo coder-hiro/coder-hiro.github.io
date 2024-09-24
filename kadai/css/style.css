@@ -289,6 +289,14 @@ html {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 header {
   width: 25%;
@@ -298,17 +306,42 @@ header {
   top: 0;
   padding: 20px;
 }
+@media screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    height: 18vh;
+    padding: 20px;
+    position: static;
+  }
+}
 header h1 {
   font-size: 24px;
   margin-bottom: 20px;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  header h1 {
+    margin-bottom: 10px;
+  }
+}
 header p {
   margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  header p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
 }
 
 #g-nav {
   padding: 20px;
+}
+@media screen and (max-width: 767px) {
+  #g-nav {
+    display: none;
+  }
 }
 #g-nav li {
   margin-bottom: 20px;
@@ -325,6 +358,11 @@ header p {
 main {
   width: 75%;
   background-color: #fff0e5;
+}
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
 }
 
 .kadai-section {
@@ -383,12 +421,22 @@ main {
   text-align: center;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 767px) {
+  .main-copy h2 {
+    font-size: 18px;
+  }
+}
 
 .lead {
   max-width: 600px;
   font-size: 18px;
   margin: 0 auto 50px;
   line-height: 2;
+}
+@media screen and (max-width: 767px) {
+  .lead {
+    font-size: 14px;
+  }
 }
 
 .free {
