@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinity-scroll|無限スクロール実装</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body id="top">
+    <div id="container">
+      <div class="wrapper">
+        <div class="fv">
+          <header>
+            <h1>Infinity-scroll</h1>
+          </header>
+
+          <div class="main-visual">
+            <img src="./img/main.jpg" alt="" />
+            <p class="lead">
+              この無限スクロールはajaxを使って、スクロールする度に別のhtmlファイルに<br />ページ遷移するようになっています。<br />
+              通常はページ遷移する度にファイルを全て読み込む必要がありますが、ajaxを<br />使うことでファイルの中の必要な部分だけ取得する事が出来るので、スムーズ<br />なページ遷移が可能になります。
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="page-1/" id="next">次のページへ</a>
+      <p class="to-top">
+        <a href="#top"><img src="./img/to-top.svg" alt="" /></a>
+      </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/jquery.clever-infinite-scroll.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

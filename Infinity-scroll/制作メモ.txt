@@ -1,0 +1,6 @@
+記載する動画URL
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U7aIqyY4W64?si=yi_kD5qlVfn3UNoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+動画のタイトル
+この動画では、Chromeブラウザのショートカットキーを20個紹介しています。ショートカットキーを使うことで、パソコンでの作業を効率化することができます。例えば、コマンドTを押すと新しいタブが開いたり、コマンドLを押すとアドレスバーにカーソルが移動したりします。ショートカットキーを覚えておくことで、マウスでの操作を減らし、作業スピードを上げることができます。

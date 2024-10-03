@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>スライダーの作り方を徹底解説！Swiperの使い方も紹介</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="wrapper">
+        <div class="pages">
+          <h2>スライダーの作り方を徹底解説！Swiperの使い方も紹介</h2>
+          <div class="pages-wrapper">
+            <div class="text-box">
+              <p>
+                ウェブサイト制作でよく使われるスライダー機能。<br />Swiperというライブラリを使って、画像や<br />テキストをスライドショーのように表示する方法を、<br />コードを交えて分かりやすく解説します。<br>初心者でも作り方が学べる内容です。
+              </p>
+              <h3>目次</h3>
+              <ol>
+                <li>スライダーが使われているサイト</li>
+                <li>現状のコードの確認</li>
+                <li>Swiperを使って実装</li>
+                <li>見栄えを整える</li>
+              </ol>
+            </div>
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/29jbN6cYDCM?si=s2vJ3qDzrRv9Cjr7"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../page-3/" id="next">次のページへ</a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/jquery.clever-infinite-scroll.js"></script>
+    <script>
+      setTimeout("redirect()", 0);
+      function redirect() {
+        location.href = "../index.html";
+      }
+      $("#container").cleverInfiniteScroll({
+        contentsWrapperSelector: "#container",
+        contentSelector: ".wrapper",
+        nextSelector: "#next",
+      });
+    </script>
+  </body>
+</html>
