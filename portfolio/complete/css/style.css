@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 共通部分 */
+.page-section {
+  min-height: 100vh;
+  padding: 80px 10px;
+  > h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+}
+
+/* works部分 */
+.works-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  > .works-box {
+    width: calc((100% - 80px) / 3);
+    border: 1px solid #333;
+    > a {
+      color: #111;
+      > h3 {
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+/* 詳細ページ部分 */
+.page-works {
+  header {
+    background-color: #dae2f3;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .main-visual {
+    max-width: 960px;
+    margin: 0 auto 80px;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    > dt {
+      width: 30%;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    > dd {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  }
+  .point {
+    max-width: 960px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    > ul {
+      list-style: disc;
+      padding-left: 1em;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* フィルタリングボタン */
+.works-btn {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 0 30px;
+  > button {
+    padding: 10px 20px;
+    border: 2px solid #176aae;
+    color: #176aae;
+    &.mixitup-control-active {
+      background-color: #176aae;
+      color: #fff;
+    }
+  }
+}

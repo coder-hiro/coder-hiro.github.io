@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+
+/* パーティカル */
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* カラーを変更でOK */
+  background-color: #cfb8cd;
+}
+
+body {
+  padding-top: 300px;
+}
+
+header {
+  width: 60%;
+  margin: 0px auto 300px;
+  background-color: #ffffff6e;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 80px 40px;
+}
+
+.g-nav {
+  width: 80%;
+  height: 60px;
+  background-color: #fff;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 20px 0 #19191987;
+
+  UL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 30px;
+    position: relative;
+    li {
+      height: 60px;
+      padding: 0 30px;
+      a {
+        padding: 5px 20px;
+        color: #333;
+        line-height: 60px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.box {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: none;
+}
+
+.inner {
+  background-color: #eddbff8f;
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+.g-nav {
+  li {
+    &:hover {
+      .box {
+        display: block;
+      }
+    }
+  }
+}
+.inner-box {
+}
+section {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  h2 {
+    text-align: center;
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .fancybox-slide--iframe .fancybox-content {
+        max-width: 80%;
+        max-height: 100%;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body id="top">
+    <header>
+      <h1>Portfolio</h1>
+      <nav id="g-nav">
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#skill">Skill</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-visual"></div>
+    <main>
+      <section class="page-section" id="about">
+        <h2>About</h2>
+      </section>
+
+      <section class="page-section" id="works">
+        <h2>Works</h2>
+        <div class="works-btn">
+          <button type="button" data-filter="all">ALL ITEN</button>
+          <button type="button" data-filter=".html">HTML/CSS</button>
+          <button type="button" data-filter=".wp">WordPress</button>
+          <button type="button" data-filter=".video">Video</button>
+          <button type="button" data-filter=".studio">Studio</button>
+        </div>
+        <div class="works-wrapper">
+          <div class="works-box mix wp video">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-1/site-1.html"
+            >
+              <h3>Coffee Festival</h3>
+              <p><img src="./img/site-1pc.webp" alt="" /></p
+            ></a>
+          </div>
+
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>Napoli Sole</h3>
+              <p><img src="./img/site-2pc.webp" alt="" /></p
+            ></a>
+          </div>
+
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>Bread&Salad</h3>
+              <p><img src="./img/site-3pc.webp" alt="" /></p
+            ></a>
+          </div>
+
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>Net Smart</h3>
+              <p><img src="./img/site-4pc.webp" alt="" /></p
+            ></a>
+          </div>
+
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>Furniture-store</h3>
+              <p><img src="./img/site-5pc.webp" alt="" /></p
+            ></a>
+          </div>
+
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>日本の四季</h3>
+              <p><img src="./img/site-6pc.webp" alt="" /></p
+            ></a>
+          </div>
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>日本三名泉の紹介</h3>
+              <p><img src="./img/site-7pc.webp" alt="" /></p
+            ></a>
+          </div>
+          <div class="works-box mix html">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>Masonry Layout</h3>
+              <p><img src="./img/site-8pc.webp" alt="" /></p
+            ></a>
+          </div>
+          <div class="works-box mix studio">
+            <a
+              href="javascript:;"
+              data-fancybox
+              data-type="iframe"
+              data-src="site-2/site-2.html"
+            >
+              <h3>川越いたい堂</h3>
+              <p><img src="./img/site-9pc.webp" alt="" /></p
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="skill">
+        <h2>Skill</h2>
+      </section>
+    </main>
+
+    <footer>
+      <p><small></small></p>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="js/mixitup.js"></script>
+    <script>
+      const mixer = mixitup(".works-wrapper");
+    </script>
+  </body>
+</html>
