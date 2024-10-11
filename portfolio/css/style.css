@@ -238,13 +238,197 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+/* パーティカル */
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* カラーを変更でOK */
+  background-color: #c3b6d3;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+}
+
+.header__title {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__title h1 {
+  display: block;
+  background-color: #ff7441;
+  width: 100%;
+  font-size: 60px;
+  margin-bottom: 10px;
+  -webkit-clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+          clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+}
+.header__title p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header__text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__text p {
+  font-size: 16px;
+}
+.header__text p a {
+  color: #333;
+}
+.header__text p a:hover {
+  -webkit-text-decoration: underline 2px solid rgba(255, 116, 65, 0.6235294118);
+          text-decoration: underline 2px solid rgba(255, 116, 65, 0.6235294118);
+  text-underline-offset: 5px;
+}
+
+#g-nav {
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.337254902);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  height: 10vh;
+  -webkit-box-shadow: 0 10px 10px rgba(21, 21, 21, 0.1019607843);
+          box-shadow: 0 10px 10px rgba(21, 21, 21, 0.1019607843);
+}
+#g-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 0 100px;
+}
+#g-nav ul li a {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  font-weight: bolder;
+}
+#g-nav ul li a:hover {
+  -webkit-text-decoration: underline 2px solid #333;
+          text-decoration: underline 2px solid #333;
+  text-underline-offset: 5px;
+}
+
+#about,
+#skill {
+  background-color: rgba(255, 255, 240, 0.2823529412);
+}
+
 .page-section {
   min-height: 100vh;
   padding: 80px 10px;
+  scroll-margin-top: 70px;
 }
 .page-section h2 {
   text-align: center;
   font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.about-container,
+.skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-img {
+  margin-top: 50px;
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.profile-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+.profile-img:hover {
+  scale: 1.1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.profile-body p + p {
+  margin-top: 50px;
+}
+.profile-body p {
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+.profile-body p a {
+  color: #333;
+}
+.profile-body p a:hover {
+  -webkit-text-decoration: underline 2px solid rgba(255, 116, 65, 0.6235294118);
+          text-decoration: underline 2px solid rgba(255, 116, 65, 0.6235294118);
+  text-underline-offset: 5px;
+}
+.profile-body p span {
+  font-weight: bold;
+}
+
+.profile-body p:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .works-wrapper {
@@ -286,8 +470,71 @@ html {
   transition: 0.3s;
 }
 
+.skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img {
+  margin-top: 20px;
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+  aspect-ratio: 1/1;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.skill-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.skill-img img + img {
+  margin-top: 20px;
+}
+
+.skill-body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 10px;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.page-inner {
+  padding-inline: 50px;
+}
+
 .page-works header {
-  background-color: beige;
+  background-color: rgba(243, 243, 190, 0.8862745098);
   text-align: center;
   padding: 30px 0;
 }
@@ -311,6 +558,9 @@ html {
   max-width: 960px;
   margin: 0 auto 80px;
   padding: 0 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .page-works dl dt {
   width: 30%;
@@ -318,15 +568,30 @@ html {
   font-weight: bold;
 }
 .page-works dl dd {
-  width: 70%;
+  width: 50%;
   margin-bottom: 20px;
+}
+.page-works dl dd a {
+  color: #111;
+}
+.page-works dl dd a:hover {
+  -webkit-text-decoration: underline 2px solid #888888;
+          text-decoration: underline 2px solid #888888;
+  text-underline-offset: 5px;
 }
 .page-works .point {
   max-width: 960px;
   margin: 0 auto 80px;
   padding: 0 20px;
 }
+.page-works .point h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 .page-works .point ul {
+  width: 60%;
+  margin: 0 auto;
   list-style: disc;
   padding-left: 1em;
   margin-top: 10px;

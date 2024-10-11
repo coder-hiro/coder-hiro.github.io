@@ -1,21 +1,192 @@
 @use "reset";
 
+// 定義
+$color-sub: #f3f3bee2;
+
 html {
   scroll-behavior: smooth;
+}
+
+
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+
+/* パーティカル */
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* カラーを変更でOK */
+  background-color: #c3b6d3;
+}
+
+.header {
+  width: 100%;
+  height: 95vh;
+}
+
+.header__title {
+  width: 65%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    
+    display: block;
+    background-color: #ff7441;
+    width: 100%;
+    font-size: 60px;
+    margin-bottom: 10px;
+    clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+  }
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.header__text {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    a {
+      color: #333;
+      &:hover {
+        text-decoration: underline 2px solid #ff74419f;
+        text-underline-offset: 5px;
+      }
+    }
+  }
+}
+
+#g-nav {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff56;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 10vh;
+  box-shadow: 0 10px 10px #1515151a;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 0 100px;
+    li {
+      a {
+        display: block;
+        font-size: 15px;
+        color: #333;
+        font-weight: bolder;
+
+        &:hover {
+          text-decoration: underline 2px solid #333;
+          text-underline-offset: 5px;
+        }
+      }
+    }
+  }
 }
 
 .main-visual {
 }
 
+#about,
+#skill {
+  background-color: #fffff048;
+}
+
 .page-section {
   min-height: 100vh;
   padding: 80px 10px;
+  scroll-margin-top: 70px;
   h2 {
     text-align: center;
     font-size: 32px;
+    margin-bottom: 40px;
   }
 }
 
+.about-container,
+.skill-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+// ---- ABOUT ----
+
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.profile-img {
+  margin-top: 50px;
+  width: 20%;
+  margin-right: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  &:hover {
+    scale: 1.1;
+    transition: 0.3s;
+  }
+}
+
+.profile-body {
+  flex: 1;
+  p + p {
+    margin-top: 50px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    a {
+      color: #333;
+      &:hover {
+        text-decoration: underline 2px solid #ff74419f;
+        text-underline-offset: 5px;
+      }
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.profile-body p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+// ---- works ----
 .works-wrapper {
   width: 85%;
   margin: 0 auto;
@@ -52,10 +223,64 @@ html {
   }
 }
 
-// 詳細ページ
+// SKILL---------
+
+.skill-container {
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-img {
+  margin-top: 20px;
+  width: 60px;
+  height: auto;
+  margin-right: 20px;
+  aspect-ratio: 1 / 1;
+  transition: 0.7s;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  img+img{
+    margin-top: 20px;
+  }
+  
+}
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-name {
+  margin-bottom: 10px;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+// 詳細ページ-------------
+
+.page-inner{
+  padding-inline: 50px;
+}
 .page-works {
   header {
-    background-color: beige;
+    background-color: $color-sub;
     text-align: center;
     padding: 30px 0;
   }
@@ -75,25 +300,43 @@ html {
     max-width: 960px;
     margin: 0 auto 80px;
     padding: 0 20px;
+    justify-content: center;
 
     dt {
       width: 30%;
       margin-bottom: 20px;
       font-weight: bold;
+      
+      
     }
     dd {
-      width: 70%;
+      width: 50%;
       margin-bottom: 20px;
+      a{
+        color: #111;
+        &:hover {
+          text-decoration: underline 2px solid #888f;
+          text-underline-offset: 5px;
+        }
+      }
     }
   }
   .point {
     max-width: 960px;
     margin: 0 auto 80px;
     padding: 0 20px;
+    h2{
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
     ul {
+      width: 60%;
+      margin: 0 auto;
       list-style: disc;
       padding-left: 1em;
       margin-top: 10px;
+
     }
   }
 }

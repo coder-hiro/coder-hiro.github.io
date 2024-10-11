@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
@@ -19,26 +28,65 @@
   </head>
 
   <body id="top">
-    <header>
-      <h1>Portfolio</h1>
+    <!-- パーティクル専用 -->
+
+    <header class="header">
+      <div class="header__title">
+        <h1>HIROYUKI CHUMAN</h1>
+        <p>PORTFOLIO</p>
+      </div>
+      <div class="header__text">
+        <p>
+          池袋にあるスクールで制作した作品集です。<br />授業のカリキュラムは<a
+            href="https://felicakunren.com/webcreate/index.html"
+            target="_blank"
+            >こちら</a
+          >です。
+        </p>
+      </div>
+
       <nav id="g-nav">
         <ul>
           <li><a href="#">Top</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#skill">Skill</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#skill">SKILL</a></li>
         </ul>
       </nav>
+      <div id="particles-js"></div>
     </header>
 
     <div class="main-visual"></div>
     <main>
       <section class="page-section" id="about">
-        <h2>About</h2>
+        <h2>ABOUT</h2>
+        <div class="about-container">
+          <div class="profile">
+            <p class="profile-img">
+              <img src="./img/face.jpg" alt="" />
+            </p>
+            <div class="profile-body">
+              <p>
+                Web制作を通じて、ユーザーの心に響く、<br />シンプルで効率的なWebサイトを創出したいと考えています。<br />コーディングの技術を日々研鑽し、<br />より良いユーザー体験を提供できるよう努めています。<br />
+                <span>余白</span
+                >と<span>hover</span>のバランスを大切にしデザインの美しさを追求しています。
+              </p>
+              <p>
+                <a href="https://www.daily-trial.com/web_site/" target="_blank"
+                  >オンラインスクール デイトラ</a
+                >にて、Figmaでデザインされたカンプを基に、<br />VSCodeを用いてHTML、CSS、JavaScriptでコーディングの制作経験を<br />積みました。特に、LP制作ではレスポンシブデザインや<br />JavaScriptフレームワークを習得し<a
+                  href="https://hiroyuki-chuman.com/"
+                  target="_blank"
+                  >ポートフォリオ</a
+                >へ掲載しました。
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-
+      <!-- work -->
       <section class="page-section" id="works">
-        <h2>Works</h2>
+        <h2>WORKS</h2>
         <div class="works-btn">
           <button type="button" data-filter="all">ALL ITEN</button>
           <button type="button" data-filter=".html">HTML/CSS</button>
@@ -52,7 +100,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-1/site-1.html"
+              data-src="modal-site/site-1.html"
             >
               <h3>Coffee Festival</h3>
               <p><img src="./img/site-1pc.webp" alt="" /></p
@@ -64,7 +112,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-2.html"
             >
               <h3>Napoli Sole</h3>
               <p><img src="./img/site-2pc.webp" alt="" /></p
@@ -76,7 +124,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-3.html"
             >
               <h3>Bread&Salad</h3>
               <p><img src="./img/site-3pc.webp" alt="" /></p
@@ -88,7 +136,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-4.html"
             >
               <h3>Net Smart</h3>
               <p><img src="./img/site-4pc.webp" alt="" /></p
@@ -100,7 +148,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-5.html"
             >
               <h3>Furniture-store</h3>
               <p><img src="./img/site-5pc.webp" alt="" /></p
@@ -112,7 +160,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-6.html"
             >
               <h3>日本の四季</h3>
               <p><img src="./img/site-6pc.webp" alt="" /></p
@@ -123,9 +171,9 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-7.html"
             >
-              <h3>日本三名泉の紹介</h3>
+              <h3>スプリットレイアウト</h3>
               <p><img src="./img/site-7pc.webp" alt="" /></p
             ></a>
           </div>
@@ -134,7 +182,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-8.html"
             >
               <h3>Masonry Layout</h3>
               <p><img src="./img/site-8pc.webp" alt="" /></p
@@ -145,7 +193,7 @@
               href="javascript:;"
               data-fancybox
               data-type="iframe"
-              data-src="site-2/site-2.html"
+              data-src="modal-site/site-9.html"
             >
               <h3>川越いたい堂</h3>
               <p><img src="./img/site-9pc.webp" alt="" /></p
@@ -153,10 +201,109 @@
           </div>
         </div>
       </section>
+      <!-- work -->
 
+      <!-- skill -->
       <section class="page-section" id="skill">
-        <h2>Skill</h2>
+        <h2>SKILL</h2>
+        <div class="skill-container">
+          <div class="skill-list">
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/html-1.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">HTML5</h3>
+                <p class="skill-text">
+                  HTML5のセマンティック要素で構造化し、見出しはh1からh6まで適切に設定。picture要素でレスポンシブな画像表示、video/audio要素で動画/音声埋め込み。フォームはautocomplete属性などでユーザーフレンドリーに。Canvas
+                  APIでインタラクティブな要素を追加し、details/summary要素でアコーディオンパネルを実装。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/css-3.svg" alt="" />
+                <img src="./img/sass-1.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">CSS3 / SASS</h3>
+                <p class="skill-text">
+                  メディアクエリ、flexbox, grid,
+                  positionでレイアウト自由自在。vh, vw,
+                  remでマルチデバイス対応。画像柔軟表示、カスタムプロパティでデザイン統一、コンポーネント指向で拡張性。変数、関数、mixinで効率化。ネスト、演算、条件分岐で複雑なスタイルも。コンパイラーで最新CSS。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/javascript-1.svg" alt="" />
+                <img src="./img/jquery.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">JavaScript/jQuery</h3>
+                <p class="skill-text">
+                  DOM操作でHTML要素を動的に操作し、イベント処理（クリック、スクロールなど）でユーザーの操作に反応。Ajaxで非同期通信を行い、CSSアニメーションと連携して滑らかな動きを実現。ライブラリ（無限スクロールなど）を活用して開発効率を向上。Fetch
+                  APIでよりモダンな非同期通信が可能。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/php-svgrepo-com.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">PHP</h3>
+                <p class="skill-text">
+                  MAMP環境でPHPを用い、MySQLなどのデータベースと連携したWebアプリケーション開発。GET/POSTメソッドでデータを送受信し、セッション管理でユーザー情報を保持。インクルード機能でテンプレート化し、効率的な開発を実現。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/wordpress-icon-1.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">WordPress</h3>
+                <p class="skill-text">
+                  WordPressでオリジナルサイトを構築。仮想サーバーで自由にカスタマイズ。オリジナルテーマを作成し、関数で機能を拡張。テンプレートタグで静的サイトを動的化。プラグインで多様な機能を追加。カスタムフィールドで柔軟なデータ管理。仮想サーバーへのデプロイで公開。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/github-icon-1.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">Git /GitHub</h3>
+                <p class="skill-text">
+                  GitHubでバージョン管理、ブランチ管理を行い、チームで効率的に開発。issue管理でタスクを可視化。GitHub
+                  Pagesで静的サイトを簡単にホスティング。GitHub
+                  ActionsでCI/CDを自動化し、開発の効率化と品質向上を実現。
+                </p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/photoshop-cc-4.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">Photoshop</h3>
+                <p class="skill-text">画像編集、バナー作成</p>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="skill-img">
+                <img src="./img/adobe-illustrator-cs6.svg" alt="" />
+              </p>
+              <div class="skill-body">
+                <h3 class="skill-name">Illustrator</h3>
+                <p class="skill-text">画像編集、バナー作成</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- skill -->
     </main>
 
     <footer>
@@ -169,10 +316,11 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/mixitup.js"></script>
     <script>
       const mixer = mixitup(".works-wrapper");
     </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
