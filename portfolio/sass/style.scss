@@ -7,8 +7,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 body {
   font-family: "Montserrat", "Helvetica Neue", Arial,
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -46,7 +44,6 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
   h1 {
-    
     display: block;
     background-color: #ff7441;
     width: 100%;
@@ -254,10 +251,9 @@ canvas {
     width: 100%;
     object-fit: cover;
   }
-  img+img{
+  img + img {
     margin-top: 20px;
   }
-  
 }
 
 .skill-body {
@@ -275,7 +271,7 @@ canvas {
 
 // 詳細ページ-------------
 
-.page-inner{
+.page-inner {
   padding-inline: 50px;
 }
 .page-works {
@@ -306,13 +302,11 @@ canvas {
       width: 30%;
       margin-bottom: 20px;
       font-weight: bold;
-      
-      
     }
     dd {
       width: 50%;
       margin-bottom: 20px;
-      a{
+      a {
         color: #111;
         &:hover {
           text-decoration: underline 2px solid #888f;
@@ -325,7 +319,7 @@ canvas {
     max-width: 960px;
     margin: 0 auto 80px;
     padding: 0 20px;
-    h2{
+    h2 {
       font-size: 24px;
       margin-bottom: 20px;
       text-align: center;
@@ -336,9 +330,17 @@ canvas {
       list-style: disc;
       padding-left: 1em;
       margin-top: 10px;
-
     }
   }
+}
+
+.studio-pc {
+  width: 100%;
+  position: relative;
+  left: 10%;
+}
+.studio-sp {
+  width: 80%;
 }
 
 /* フィルタリングボタン */

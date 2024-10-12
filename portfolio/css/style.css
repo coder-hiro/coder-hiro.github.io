@@ -597,6 +597,16 @@ canvas {
   margin-top: 10px;
 }
 
+.studio-pc {
+  width: 100%;
+  position: relative;
+  left: 10%;
+}
+
+.studio-sp {
+  width: 80%;
+}
+
 /* フィルタリングボタン */
 .works-btn {
   display: -webkit-box;
