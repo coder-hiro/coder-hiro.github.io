@@ -301,6 +301,7 @@ canvas {
 }
 .header__text p a {
   color: #333;
+  font-weight: bold;
 }
 .header__text p a:hover {
   -webkit-text-decoration: underline 2px solid rgba(255, 116, 65, 0.6235294118);
