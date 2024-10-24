@@ -34,6 +34,10 @@ canvas {
 .header {
   width: 100%;
   height: 95vh;
+
+  @media screen and (max-width: 768px) {
+    height: 80vh;
+  }
 }
 
 .header__title {
@@ -43,6 +47,10 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    top: 40%;
+  }
   h1 {
     display: block;
     background-color: #ff7441;
@@ -50,10 +58,22 @@ canvas {
     font-size: 60px;
     margin-bottom: 10px;
     clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 5% 50%, 0 0);
+    max-width: 860px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
   }
   p {
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
+    margin-top: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -64,8 +84,16 @@ canvas {
   transform: translate(-50%, -50%);
   text-align: center;
 
+  @media (max-width: 768px) {
+    top: 60%;
+  }
+
   p {
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
     a {
       color: #333;
       font-weight: bold;
@@ -85,12 +113,13 @@ canvas {
   width: 100%;
   height: 10vh;
   box-shadow: 0 10px 10px #1515151a;
+  z-index: calc(infinity);
   ul {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    gap: 0 100px;
+    gap: 11%;
     li {
       a {
         display: block;
@@ -116,13 +145,22 @@ canvas {
 }
 
 .page-section {
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 80px 10px;
   scroll-margin-top: 70px;
+
+  @media (max-width: 768px) {
+    min-height: 40vh;
+  }
   h2 {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -132,6 +170,12 @@ canvas {
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
+}
+
+.about-container {
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
 }
 // ---- ABOUT ----
 
@@ -148,6 +192,10 @@ canvas {
   border-radius: 50%;
   transition: 0.3s;
 
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+
   img {
     width: 100%;
     border-radius: 50%;
@@ -160,13 +208,19 @@ canvas {
 
 .profile-body {
   flex: 1;
-  p + p {
-    margin-top: 50px;
-  }
+  // p + p {
+  //   margin-top: 50px;
+  // }
   p {
     font-size: 15px;
     line-height: 1.8;
     letter-spacing: 0.1em;
+    margin-top: 60px;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      margin-top: 0px;
+    }
     a {
       color: #333;
       &:hover {
@@ -185,17 +239,42 @@ canvas {
 }
 
 // ---- works ----
+.works-btn {
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: 0 0 10px #3c32b5b4;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 .works-wrapper {
   width: 85%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 150px 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+  }
 }
 
 .works-box {
   width: calc((100% - 80px) / 3);
   transition: 0.3s;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   &:hover {
     transform: translateY(-10px);
@@ -224,6 +303,9 @@ canvas {
 // SKILL---------
 
 .skill-container {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .skill-list {
@@ -231,14 +313,25 @@ canvas {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -50px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .skill-item {
+  width: 48%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .skill-img {
@@ -263,28 +356,50 @@ canvas {
 
 .skill-name {
   margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    // font-size: 12px;
+    // text-align: center;
+  }
 }
 
 .skill-text {
   font-size: 14px;
   line-height: 1.8;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 }
 
 // 詳細ページ-------------
 
 .page-inner {
   padding-inline: 50px;
+
+  @media (max-width: 768px) {
+    padding-inline: 5px;
+  }
 }
 .page-works {
   header {
     background-color: $color-sub;
     text-align: center;
     padding: 30px 0;
+
+    @media (max-width: 768px) {
+      font-size: 11px;
+    }
   }
   .main-head {
     display: flex;
     gap: 20px;
     padding-inline: 50px;
+
+    @media (max-width: 768px) {
+      padding-inline: 5px;
+      gap: 5%;
+    }
   }
   .main-visual {
     max-width: 960px;
@@ -299,14 +414,26 @@ canvas {
     padding: 0 20px;
     justify-content: center;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     dt {
       width: 30%;
       margin-bottom: 20px;
       font-weight: bold;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
     dd {
       width: 50%;
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
       a {
         color: #111;
         &:hover {
@@ -324,6 +451,10 @@ canvas {
       font-size: 24px;
       margin-bottom: 20px;
       text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
     ul {
       width: 60%;
@@ -331,6 +462,16 @@ canvas {
       list-style: disc;
       padding-left: 1em;
       margin-top: 10px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      li {
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
@@ -342,6 +483,12 @@ canvas {
 }
 .studio-sp {
   width: 80%;
+}
+
+.fancybox-slide {
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 /* フィルタリングボタン */
