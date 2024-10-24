@@ -656,6 +656,9 @@ canvas {
   }
 }
 
+.page-works {
+  margin-top: 90px;
+}
 .page-works header {
   background-color: rgba(243, 243, 190, 0.8862745098);
   text-align: center;
@@ -682,6 +685,11 @@ canvas {
 .page-works .main-visual {
   max-width: 960px;
   margin: 80px auto;
+}
+@media (max-width: 768px) {
+  .page-works .main-visual {
+    margin: 40px auto;
+  }
 }
 .page-works dl {
   display: -webkit-box;
