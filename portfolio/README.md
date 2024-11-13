@@ -8,6 +8,7 @@
 ## 使用プラグイン
 * mixitup
 * AOS.jp
+* particles.js
 
 ## works必要な情報
 * 制作時間
