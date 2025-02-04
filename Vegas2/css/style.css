@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.mvInner{
+    height: 100vh;
+}
+.mvTitle{
+    color: #fff;
+    font-size: 3rem;
+}
+.mvText{
+    color: #fff;
+    font-size: 1.5rem;
+}
