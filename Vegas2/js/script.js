@@ -1,4 +1,4 @@
-$(".mvInner").vegas({
+jQuery(".mvInner").vegas({
     slides: [
         { src: "./img/zoom01.webp" },
         { src: "./img/zoom02.webp" },
