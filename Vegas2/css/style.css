@@ -10,3 +10,9 @@
     color: #fff;
     font-size: 1.5rem;
 }
+.vegas-slide-inner{
+   background-size: 100%;
+   background-position: 50% 50%;
+   height: 100vh;
+
+}
