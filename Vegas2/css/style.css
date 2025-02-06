@@ -1,18 +1,29 @@
 @charset "UTF-8";
-.mvInner {
-  height: 100vh;
+body {
+  font-family: "Agbalumo", serif;
 }
-.mvTitle {
+.mvInner {
+  position: relative;
   color: #fff;
+  height: 100vh;
+  text-shadow: #000 1px 1px 10px;
+}
+
+.mvTitle {
+  position: absolute;
   font-size: 3rem;
+  top: 50px;
+  left: 50px;
 }
 .mvText {
-  color: #fff;
-  font-size: 1.5rem;
+  position: absolute;
+  font-size: 2.5rem;
+  top: 100px;
+  left: 50px;
 }
 
 .vegas-slide-inner {
-  background-size: 100%;
-  background-position: 50% 50%;
-  height: 100vh;
+  /* background-size: 100%; */
+  /* background-position: 50% 50%; */
+  /* height: 100vh; */
 }
