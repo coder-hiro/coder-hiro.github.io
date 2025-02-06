@@ -8,6 +8,9 @@ $(document).ready(function () {
           { src: "./img/sp/new03_sp.webp" },
           { src: "./img/sp/new04_sp.webp" },
         ],
+        align: "50%", // スライドの位置を中央に設定
+        delay: 5000, // スライド間の遷移時間を5秒に設定
+        animation: 'kenburns'
       });
     } else {
       $(".mvInner").vegas({
@@ -22,6 +25,9 @@ $(document).ready(function () {
           { src: "./img/zoom08.webp" },
           { src: "./img/zoom09.webp" },
         ],
+        align: "center", // スライドの位置を中央に設定
+
+
       });
     }
   }
