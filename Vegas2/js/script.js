@@ -10,7 +10,7 @@ $(document).ready(function () {
         ],
         align: "50%", // スライドの位置を中央に設定
         delay: 5000, // スライド間の遷移時間を5秒に設定
-        animation: 'kenburns'
+        animation: "kenburns",
       });
     } else {
       $(".mvInner").vegas({
@@ -26,8 +26,6 @@ $(document).ready(function () {
           { src: "./img/zoom09.webp" },
         ],
         align: "center", // スライドの位置を中央に設定
-
-
       });
     }
   }
