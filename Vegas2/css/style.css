@@ -1,7 +1,92 @@
-@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
+
 body {
   font-family: "Agbalumo", serif;
 }
+
 .mvInner {
   position: relative;
   height: 100vh;
@@ -12,11 +97,12 @@ body {
   font-size: 2.5rem;
   top: 30px;
   left: 20px;
-  color: #ff7c17bd;
+  color: rgba(255, 124, 23, 0.7411764706);
   text-shadow: #333 0px 0px 10px;
 }
+
 .mvText {
-  color: #e2ff23b1;
+  color: rgba(226, 255, 35, 0.6941176471);
   text-shadow: #333 0px 0px 10px;
   text-decoration: underline;
   text-underline-offset: 12px;
@@ -24,10 +110,12 @@ body {
   font-size: 3rem;
   top: 80px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
+
 .mvMesses {
-  color: #ffffff70;
+  color: rgba(255, 255, 255, 0.4392156863);
   text-shadow: #333 1px 1px 10px;
   position: absolute;
   font-size: 1.3rem;
@@ -36,5 +124,6 @@ body {
 }
 
 .vegas-slide {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

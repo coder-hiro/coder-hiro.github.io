@@ -1,0 +1,44 @@
+body {
+  font-family: "Agbalumo", serif;
+}
+
+.mvInner {
+  position: relative;
+  height: 100vh;
+}
+
+.mvTitle {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 30px;
+  left: 20px;
+  color: rgba(255, 124, 23, 0.7411764706);
+  text-shadow: #333 0px 0px 10px;
+}
+
+.mvText {
+  color: rgba(226, 255, 35, 0.6941176471);
+  text-shadow: #333 0px 0px 10px;
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  position: absolute;
+  font-size: 3rem;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mvMesses {
+  color: rgba(255, 255, 255, 0.4392156863);
+  text-shadow: #333 1px 1px 10px;
+  position: absolute;
+  font-size: 1.3rem;
+  bottom: 15%;
+  right: 2%;
+}
+
+.vegas-slide {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
